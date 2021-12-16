@@ -1,39 +1,39 @@
 import './App.css';
-
+// import character from '/nft.png'; 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header flex">
         <div id="header-home">
           <div id="Logo"></div>
           <div class="header-content">CryptoHype</div>
         </div>
-        <div id="header-browse">
+        <div className="flex">
           <div class="header-content">Market</div>
           <div class="header-content">Discover</div>
           <div class="header-content">About</div>
           <div class="header-content" >Artist</div>
         </div>
-        <input class="header-content" type="text"></input>
+        <input class="header-content" type="text" placeholder='Searchs related to NFT'></input>
       </header>
-      <div id="page-content">
+      <div id="page-content" className='flex'>
         <div id="content-left">
-          <h1>Best NFT Collection for Your future</h1>
+          <h1>Best <span id="span">NFT</span> Collection for Your future</h1>
           <div class="buttons">
-            <button>Explore Now</button>
-            <button>Create NFT</button>
+            <div className="btn">Explore Now</div>
+            <div className="btn btn-border">Create NFT</div>
           </div>
-          <div id="content-numbers">
-            <div>
+          <div id="content-numbers" className='flex'>
+            <div >
               <strong>62500</strong>
               <div>Collections</div>
             </div>
-            <br></br>
+            <hr/>
             <div>
               <strong>14000 </strong>
               <div>auctions</div>
             </div>
-            <br></br>
+            <hr/>
             <div>
               <strong>5200</strong>
               <div>Artist</div>
@@ -42,34 +42,39 @@ function App() {
           </div>
         </div>
         <div id="content-right">
-          <img alt="nft" src="../public/nft.png"></img>
-          <div id="nft-showcase">
-            <div>Current Bid</div>
-            <strong>12.43 ETH</strong>
-            <button>Place Bid</button>
-            <div>Ends Inc</div>
-            <strong>12:24:00</strong>
-            <button>View NFT</button>
+          <img id="character" alt="nft" src={process.env.PUBLIC_URL + '/nft.png'}></img>
+          <div id="nft-showcase" className='flex'>
+            <div className='flex-col col-left'>
+              <p>Current Bid</p>
+              <strong>12.43 ETH</strong>
+              <div className="btn">Place Bid</div>
+            </div>
+            <div className='flex-col col-right'>
+              <p>Ends Inc</p>
+              <strong>12:24:00</strong>
+              <div className="btn btn-border btn-white">View NFT</div>  
+            </div>
+
           </div>
         </div>
       </div>
 
-      <div id="page-icons">
-        <div>
-          <div>image</div>
-          <p>trusted with 10 achievement</p>
+      <div id="page-icons" className='flex'>
+        <div className="flex">
+          <img src={process.env.PUBLIC_URL + '/nft3.png'}/>
+          <p style={{width:"150px", textAlign:"left"}}>trusted with 10 achievement</p>
         </div>
-        <div>
-          <div>image</div>
-          <p>Easy Buy & Submit Best NFT Art</p>
+        <div className="flex">
+          <img src={process.env.PUBLIC_URL + '/nft4.png'}/>
+          <p style={{width:"150px", textAlign:"left"}}>Easy Buy & Submit Best NFT Art</p>
         </div>
-        <div>
-          <div>image</div>
-          <p>Get Discount Pro Membership</p>
+        <div className="flex">
+          <img src={process.env.PUBLIC_URL + '/nft5.png'}/>
+          <p style={{width:"150px", textAlign:"left"}}>Get Discount Pro Membership</p>
         </div>
       </div>
-      <div id="page-browse">
-        <h2>Latest NFT Artwork</h2>
+      <div id="page-browse" className="flex">
+        <h2>Latest <span>NFT</span> Artwork</h2>
         <a href="">View All Artwork</a>
       </div>
 
