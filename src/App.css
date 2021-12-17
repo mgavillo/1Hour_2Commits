@@ -18,7 +18,7 @@
 .flex-col{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
 }
 
 h1{
@@ -27,6 +27,10 @@ h1{
 
 p{
   margin: 0 20px 0px 0px;
+}
+
+strong{
+  margin: 20px 0 20px 0;
 }
 
 .white{
@@ -60,11 +64,34 @@ input::placeholder{
   color: white;
 }
 
+#notif{
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0%;
+}
 
+#notif > p {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
 #content-text{
-  width: 500px;
+  width: 30%;
+  min-width: 250px;
   align-items: start;
+}
+
+#content-text > p {
+  line-height:2.5;
+  font-size: 18px;
+}
+
+#content-text > h1{
+  margin:0;
 }
 
 .vertical-text{
@@ -73,5 +100,52 @@ input::placeholder{
 }
 
 hr{
-  height: 50px;
+  height: 100px;
 }
+
+#our-vision{
+  margin: -100px 0 0 0;
+  align-items: center;
+}
+
+#line{
+  margin: 0 10px 0 -23px;
+  width: 100px;
+  height: 2px;
+  background-color: #6b7c66;
+
+}
+
+#prev-next-container{
+  position: relative;
+  left:2.5%;
+  width: 250px;
+  height: 100px;
+  background-color: #f9f3ee;
+  justify-content: center;
+}
+
+#slash{
+  background-color: lightslategray;
+  width:70px;
+  height:2px;
+  transform: rotate(-45deg);
+  margin: 0
+}
+
+#nav-numbers > *:not(.current){
+  opacity: 50%;
+}
+
+.numbers{
+  margin: 20px 20px;
+}
+
+.point{
+  width:7px;
+  height:7px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+

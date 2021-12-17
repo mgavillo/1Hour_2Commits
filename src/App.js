@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header flex-row">
-        <p>Soper.</p>
+        <p className="green">Soper.</p>
         <div className="flex-row">
           <p>Home</p>
           <p>About</p>
@@ -19,7 +19,10 @@ function App() {
           </div>
 
           <p>Cart</p>
-          <div>img</div>
+          <div id="notif">
+            <p>2</p>
+          </div>
+
         </div>
       </header>
       <div id="content" className="flex-row">
@@ -40,6 +43,41 @@ function App() {
           <strong>ig</strong>
           <strong>tw</strong>
         </div>
+      </div>
+      <div id="nav" className="flex-row">
+        <div id="our-vision" className="flex-row">
+          <img src={process.env.PUBLIC_URL + "/main2.png"}></img>
+          <div id="line"></div>
+          <p className="green">Our vision</p>
+        </div>
+        <div id="prev-next-container" className='flex-row'>
+          <strong className="green">PREV</strong>
+          <div id="slash"></div>
+          <p>NEXT</p>
+        </div>
+        <div id="nav-numbers" className="flex-row white">
+            <div className="flex-col">
+              <p className="numbers">01</p>
+              <div className="point"></div>
+            </div>
+            <div className="flex-col">
+              <p className="numbers">02</p>
+              <div className="point"></div>
+            </div>
+            <div className="flex-col current">
+              <p className="numbers">03</p>
+              <div className="point"></div>
+            </div>
+            <div className="flex-col">
+              <p className="numbers">04</p>
+              <div className="point"></div>
+            </div>
+            <div className="flex-col">
+              <p className="numbers">05</p>
+              <div className="point"></div>
+            </div>
+        </div>
+
       </div>
     </div>
   );
