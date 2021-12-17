@@ -19,8 +19,8 @@ function App() {
           </div>
 
           <p>Cart</p>
-          <div id="notif">
-            <p>2</p>
+          <div id="notif" className="flex-row">
+            <p className="white">2</p>
           </div>
 
         </div>
